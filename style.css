@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #ffe4ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff4d8d;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+}
+
+.search-section {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.search-section input {
+  width: 100%;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ffb6c1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #7369ff;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  background: #fff0f5;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  animation: fadeIn 0.3s ease;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.complete-btn {
+  background: green;
+}
+
+.delete-btn {
+  background: crimson;
+}
+
+small {
+  color: gray;
+  font-size: 12px;
+}
+
+#clearCompleted {
+  width: 100%;
+  margin-top: 15px;
+  background: #111827;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: gray;
+}
+
+/* DARK MODE */
+
+.dark {
+  background: #111827;
+  color: white;
+}
+
+.dark .container {
+  background: #1f2937;
+}
+
+.dark input {
+  background: #374151;
+  color: white;
+  border: none;
+}
+
+.dark li {
+  background: #374151;
+}
+
+.dark footer {
+  color: #d1d5db;
+}
+
+.dark h1 {
+  color: #a99aff;
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
